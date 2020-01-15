@@ -23,13 +23,23 @@
         }
     }
 ```
-5. 创建路由文件`CIAndT.routing.yml`
+5. 创建路由文件`CIAndT.routing.yml`， 注意下面的`defaults``requirements`
 ```yml
     CIAndT.content:
-        path: '/test'
-        default:
-            _controller: 'Drupal\CIAndT\Controller\MyController::content'
-            _title: '自定义的模块开发'
-        requirement:
-            _permission: 'access content'
+      path: '/test'
+      defaults:
+        _controller: 'Drupal\CIAndT\Controller\MyController::content'
+        _title: '自定义的模块开发'
+      requirements:
+        _permission: 'access content'
 ```
+6. 创建菜单链接，`CIAndT.links.menu.yml`
+```yml
+    CIAndT.admin: 
+    title: 'CIAndT模块设置'
+    description: '设置模块内容'
+    parent: system.admin_config_development
+    route_name: CIAndT.content
+    weight: 100
+```
+7. 创建自定义区块，在src下创建一个`Plugin`文件夹，并在该文件夹下新建`Block`文件夹，在`Block`下新建`myBlock.php`文件

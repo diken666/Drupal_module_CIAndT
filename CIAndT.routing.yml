@@ -1,7 +1,7 @@
 CIAndT.content:
   path: '/test'
-  default:
+  defaults:
     _controller: 'Drupal\CIAndT\Controller\MyController::content'
     _title: '自定义的模块开发'
-  requirement:
+  requirements:
     _permission: 'access content'

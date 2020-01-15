@@ -1,0 +1,6 @@
+CIAndT.admin: 
+  title: 'CIAndT模块设置'
+  description: '设置模块内容'
+  parent: system.admin_config_development
+  route_name: CIAndT.content
+  weight: 100
