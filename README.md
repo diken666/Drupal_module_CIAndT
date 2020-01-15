@@ -42,4 +42,27 @@
     route_name: CIAndT.content
     weight: 100
 ```
-7. 创建自定义区块，在src下创建一个`Plugin`文件夹，并在该文件夹下新建`Block`文件夹，在`Block`下新建`myBlock.php`文件
+7. 创建自定义区块，在src下创建一个`Plugin`文件夹，并在该文件夹下新建`Block`文件夹，在`Block`下新建`MyBlock.php`文件
+```php
+    namespace Drupal\CIAndT\Plugin\Block;
+    use Drupal\Core\Block\BlockBase;
+    /**
+     * Provides a 'MyBlock' Block.
+     *
+     * @Block(
+     *   id = "my_block",
+     *   admin_label = @Translation("my block"),
+     *   category = @Translation("Custom"),
+     * )
+     */
+    class MyBlock extends BlockBase {
+        /**
+         * {@inheritdoc}
+         */
+        public function build() {
+            return [
+                '#markup' => $this->t('<h1>Hello, World!</h1>'),
+            ];
+        }
+    }
+```
