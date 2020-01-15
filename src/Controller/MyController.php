@@ -1,3 +1,5 @@
+<?php
+
 namespace Drupal\CIAndT\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
@@ -7,6 +9,6 @@ class MyController extends ControllerBase {
         return array(
             '#type'=> 'markup',
             '#markup'=> t('CIantttt')
-        )
+        );
     }
 }
