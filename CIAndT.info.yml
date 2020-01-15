@@ -1,0 +1,6 @@
+name: CIAndT
+discription: CIAndT模块部分
+package: Custom
+type: module
+version: 1.0
+core: 8.x
